@@ -13,11 +13,11 @@ public class FileHandler {
     static String typeFile = "";
     private List<String> listName = new ArrayList<String>();
 
-    public static String getTypeFile() {
+    public String getTypeFile() {
         return typeFile;
     }
 
-    public static void setTypeFile(String typeFile) {
+    public void setTypeFile(String typeFile) {
         FileHandler.typeFile = typeFile;
     }
 
@@ -46,7 +46,7 @@ public class FileHandler {
                     getAllNamesToFile(item);
                 } else {
                     String nameFile = item.getName();
-                    if (nameFile.contains(typeFile)) {
+                    if (nameFile.endsWith(typeFile)) {
                         listName.add(nameFile);
                     }
                 }

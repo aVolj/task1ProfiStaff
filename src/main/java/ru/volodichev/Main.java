@@ -9,6 +9,7 @@ public class Main {
 
         FileHandler fileHandler = new FileHandler();
         File file = new File("C:\\testDir");
+        fileHandler.setTypeFile(".txt");
         try {
             fileHandler.getAllNamesToFile(file);
         } catch (FileNotFoundException e) {
